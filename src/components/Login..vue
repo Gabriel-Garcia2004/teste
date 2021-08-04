@@ -41,42 +41,48 @@ export default {
 .login{
   background-image: url('../assets/fundo-1.png');
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  
 
 }
 .login__container{
   background-image: url('../assets/fundo-2.png');
   background-repeat: no-repeat;
   background-size: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   max-width: 100%;
   height: 100vh;
 
 }
 .login__ninja-lecdt-1{
-  max-width: 890px;
+  width: 85%;
   min-width: 200px;
-  max-height:95vh;
-  object-fit: contain;
-  justify-self: flex-start;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: center top;
+  justify-self: flex-end;
+  align-self: flex-end;
   grid-column: 1/2;
+  grid-row: 1/2;
+  transform: scaleX(-1);
+
 }
 .login__ninja-lecdt-2{
-  max-width: 840px;
+  max-width: 50%;
   min-width: 200px;
-  max-height: 100vh;
-  object-fit: contain;
-  justify-self: flex-end;
-  grid-column: 3/3;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: center top;
+  justify-self: flex-start;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  transform: scale(-1, -1);
 
 }
 .login__box{
   max-width: 550px;
-  width: 350px;
-  max-height: 400px;
-  grid-column: 2/2;
+  grid-column: 1/2;
   grid-row: 1;
   justify-self: center;
   align-self: center;
@@ -89,6 +95,9 @@ export default {
   align-items: center;
   justify-content:  center;
   gap:  50px 0;
+  margin: 5px;
+  grid-row: 1/2;
+
 }
 .login__title{
   font-family: ccmonster;
@@ -157,10 +166,51 @@ transition: .5s ease;
 .login__link:hover{
   opacity: 1;
 }
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .login__container{
-      display: grid;
+  background-image: url('../assets/fundo-2.png');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  height: 100vh;
+
+
+}
+  .login__box{
+  width: 350px;
+  grid-column: 2/2;
+
+    
   }
+  .login__ninja-lecdt-1{
+    width: unset;
+  max-width: 890px;
+  min-width: 200px;
+  max-height:95vh;
+  object-fit: contain;
+  justify-self: flex-start;
+  align-self: flex-end;
+  grid-column: 1/2;
+  transform: scaleX(1);
+
+  
+}
+.login__ninja-lecdt-2{
+  max-width: 840px;
+  min-width: 200px;
+  max-height: 100vh;
+  object-fit: contain;
+  justify-self: flex-end;
+  grid-column: 3/3;
+  grid-row: 1;
+  align-self: flex-end;
+  transform: scaleY(1);
+
+}
+
+
+
 }
 </style>
